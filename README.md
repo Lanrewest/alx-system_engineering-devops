@@ -1,2 +1,2 @@
-0x06. Regular expression
+0x0A. Configuration management
 Yahaya Abdulwasiu
