@@ -13,7 +13,7 @@ username=$3
 ssh_key=$4
 
 # use scp to transfer the file to the server
-scp -o StrictHostKeyChecking=no -i $ssh_key $file_path $username@$ip_address:~
+scp -o StrictHostKeyChecking=no -i $ssh_key $file_path $username@$ip_address:~/
 
 # check if scp command was successful
 if [ $? -eq 0 ]; then
