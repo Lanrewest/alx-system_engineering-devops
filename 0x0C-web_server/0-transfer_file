@@ -1,6 +1,4 @@
-#!/usr/bin/env bash
-
-# check if all 4 parameters are provided
+eck if all 4 parameters are provided
 if [ $# -lt 4 ]; then
   echo "Usage: $0 PATH_TO_FILE IP USERNAME PATH_TO_SSH_KEY"
   exit 1
@@ -12,8 +10,7 @@ ip_address=$2
 username=$3
 ssh_key=$4
 
-# use scp to transfer the file to the server
-scp -o StrictHostKeyChecking=no -i $ssh_key $file_path $username@$ip_address:~/
+# use scp to transfer the file to the server               scp -o StrictHostKeyChecking=no -i $ssh_key $file_path $username@$ip_address:~/
 
 # check if scp command was successful
 if [ $? -eq 0 ]; then
@@ -21,4 +18,3 @@ if [ $? -eq 0 ]; then
 else
   echo "File transfer failed."
 fi
-
